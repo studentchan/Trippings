@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dcd5ea563e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="2.png" alt="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#poems">Poems</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UX/UI Designer</p>
+                <h1>Hi, I'm <span>Christian Tags</span><br>from Gingoog City</h1>
+            </div>
+        </div>       
+    </div>
+<!-- --------about------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="dp.jpg" alt="dp.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum quod id ratione consectetur, tempore adipisci omnis vel optio quaerat doloribus ea dicta odit sapiente consequatur earum qui illo quam maiores atque. Nam, at.</p>
+                    
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('personal')">Personal</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="personal">
+                        <ul>
+                            <li><span>Nationality</span><br>Filippino</li>
+                            <li><span>Sex</span><br>Male</li>
+                            <li><span>Height</span><br>5 4"</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-Current</span><br>UX?UI Design Training at ET Instittute.</li>
+                            <li><span>2019-2021</span><br>Team lead at Startup LLC</li>
+                            <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Elementary</span><br>Bagubad Elementary School(2013-14)</li>
+                            <li><span>Secondary</span><br>Gingoog City Comprehensive National High School(2019-20)</li>
+                            <li><span>College</span><br>Gingoog City Colleges, Inc.(Current)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ---------Poems------- -->
+<div id="poems">
+    <div class="container">
+        <h1 class="sub-title">Favorite Poems</h1>
+        <div class="services-list">
+            <div>
+                <h2>If—</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odio modi assumenda quia at, ab illum quidem iste dolores nisi.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>A Dream Within A Dream</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque perspiciatis molestiae quas enim aliquam libero voluptate. Quia possimus non quas.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>The Road Not Taken</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat recusandae fugit dicta! Adipisci quae assumenda eius, optio alias repellat. Beatae.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------blogs---------- -->
+<div id="blogs">
+    <div class="container">
+       <h1 class="sub-title">My Blogs</h1>
+       <div class="work-list">
+            <div class="work">
+                <img src="dp.jpg" >               
+                    <div class="card-content">
+                        <a href="nlog.html" class="title">Title</a>
+                        <p class="card-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, quae
+                            quam non labore reprehenderit animi accusantium provident sequi voluptatum ex asperiores
+                            ipsa culpa voluptatibus nihil minima neque inventore laboriosam. Alias?</p>
+                    </div>
+                <div class="layer">
+                    <a href="nlog1.html"><i class="fas fa-external-link-alt"> Read More</i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="dp.jpg" >
+                <div class="card-content">
+                    <a href="nlog.html" class="title">Title</a>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, quae
+                        quam non labore reprehenderit animi accusantium provident sequi voluptatum ex asperiores
+                        ipsa culpa voluptatibus nihil minima neque inventore laboriosam. Alias?</p>
+                </div>
+                <div class="layer">
+                    <a href="nlog.html"><i class="fas fa-external-link-alt"> Read More</i></a>
+                </div>
+            </div>
+       </div>
+
+    </div>
+</div>
+<footer>
+    <p>&copy; Trippings 2024. All Rights Reserved.</p>
+</footer>
+</body>
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+       for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script> 
+
+</html>
